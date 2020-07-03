@@ -7,67 +7,65 @@
 </head>
 <body>
     <style> 
-    /* * es para aplicar propiedades a todos los elementos */
-    /* de el doumento */
     *{
         font-family: "Helvetica";
-        /* background-color: aqua; */
     }
     header{
         width: 100%;
         height: 80px;
-        background-color: #ffbd69;
+        background-color: #AB88FF;
     }
-    #parrafo{
-        color: red;
-    }
+   
     body{
         margin: 0px;
+        background-color: #AB88FF;
+
     }
-    .caja1{
-        /*ancho*/
-        width: 20px;
-        /*alto*/
-        height: 20px;
-        background-color: #111d5e;
-        /* borde Dentro de nuestro elemento */
-        padding: 20px;
-        /* borde fuera de nuestro elemento */
-        border: 2px solid #c70039;
-        /* box-sizing: border-box; */
-        /* Margenes: Espacios entre elementos */
-        margin: 10px 20px 30px 40px;
-    }
-    .caja2{
-        
-width: 30px;
-height: 30px;
-background-color:#f37121 ;
-    }
-header img{
+    
+    .header__img{
     width: 200px;margin-top: 10px;
     margin-left: 10px;
-}
+    }
+    .header__menu{
+    margin-right: 30px;
+    }
 
+    .header__menu ul{
+        /* display: none; */
+        list-style: none;
+        padding: 0px;
+        position: absolute;
+        width: 100 px;
+        text-align: right;
+        margin: 0px 0px 0px -14px;
+    }
+    .header__menu--profile{ 
+        margin-right: right 8px;
+        width: 40px;
+        padding: 0px;
+    }
     </style>
-    <header>
-        <img src="logo-platzi-video-BW2.png" alt="Logo">
-        <em>
-            Tu Cuenta
-        </em>
-        <p id="parrafo">
-            Cerrar Sesión
-        </p>
+    <header class="header">
+        <img class="header__img"  src="logo-platzi-video-BW2.png" alt="Logo"> 
+        <div class="header__menu">   
+            <div class="header__menu--profile">
+                <img src="icons8-natural-user-interface-1-64.png" alt="User">
+                <p>Perfil</p>
+
+            </div>
+            
+            <ul>
+                <li> <a href="/"> Cuenta</a></li>
+                <li> <a href="/"> Cerrar Sesión</a></li>
+                
+            </ul>
+        </div>
     </header>
   
-    <h1>Seccion Principal</h1>
-
-<div class="caja1">   </div>
-<div class="caja2">   </div>
-
+   
 
 <footer>
-    <ol>
+    <!-- <ol>
         <li>
         Contáctanos
         </li>
@@ -78,7 +76,7 @@ header img{
         
         <li>
             Terminos Y Condiciones
-        </li>
+        </li> -->
     </ol>
 </footer>
 </body>
