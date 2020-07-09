@@ -134,7 +134,7 @@
        margin: 70px 0px; 
        padding-bottom:10px;
    }
-   .carrusel__item{
+   .carrusel-item{
        background-color: brown;
        width: 200px;
        height: 250px;
@@ -147,25 +147,48 @@
        cursor: pointer;
        transition: 450ms;
        transform-origin:center left ;
+       position: relative;
   }
 
   /* cuando x tenga este estado ,(~) todos dentro del elemento harán esto */
-  .carrusel__item:hover  ~ .carrusel__item{
+  .carrusel-item:hover  ~ .carrusel-item{
       /* Los mueve hacia la derecha, el elemento actual */
       transform: translate3d(100px,0,0);
 
   }
     /* cuando x tenga este estado ,elemento especifico hará esto */
-  .carrusel__container:hover  .carrusel__item{
+  .carrusel__container:hover  .carrusel-item{
     opacity: 0.3;
 
   }
 
-  .carrusel__container:hover .carrusel__item:hover{
+  .carrusel__container:hover .carrusel-item:hover{
       transform: scale(1.5);
       opacity: 01;
 
   }
+
+  /* dandole un tamaño fijo a la imagen de los elementos item */
+  .carrusel-item__img{
+      width: 200px;
+      height: 250px;
+      /* obj-fit:cover redimenciona la imagen con su escala original pero
+      con las limitaciones establecidas */
+      object-fit: cover;  
+  }
+  .carrusel-item__details{
+    background: linear-gradient(to top, rgba(138, 15, 15, 0.9) 0%, rgba(4, 138, 42, 0)70%);
+    font-size: 10px;
+    opacity:1;
+    transition:450ms opacity;   
+    padding: 10px;
+    position: absolute;  
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0 ;
+  }
+
     </style>
     <header class="header">
         <img class="header__img"  src="logo-platzi-video-BW2.png" alt="Logo">
@@ -188,16 +211,24 @@
 
 <section class="carrusel">
     <div class="carrusel__container">
-        <div class="carrusel__item">
+        <div class="carrusel-item">
+            <img class="carrusel-item__img" src="https://images.pexels.com/photos/34153/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Teclado_SubBlanco">
+            <div class="carrusel-item__details">
+                <div>   
+                <img src="icons8-play-64.png" alt="Icono_Play">                    
+                    <img src="icons8-heart-plus-80.png" alt="Plus">
+                </div>
+                <p class="carrusel-item__details--title"> Titulo jeje </p>
+                <p class="carrusel-item__details--subtitle"> 2019 16+ 117min </p>
+            </div>
+        </div>
+        <div class="carrusel-item">
 
         </div>
-        <div class="carrusel__item">
+        <div class="carrusel-item">
 
         </div>
-        <div class="carrusel__item">
-
-        </div>
-        <div class="carrusel__item">
+        <div class="carrusel-item">
 
         </div>
     </div>
