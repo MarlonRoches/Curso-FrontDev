@@ -8,8 +8,8 @@
     <title>Platzi Video</title>
 </head>
 <body>
-    <style> 
-   
+    <style>
+
     header{
         width: 100%;
         height: 80px;
@@ -19,14 +19,14 @@
         /* alinear elementos verticalmente */
         align-items: center;
     }
-   
+
     body{
         margin: 0px;
         background-color: #8e57ed;
         /* Aplicando font */
         font-family: 'Muli', sans-serif;
     }
-    
+
     .header__img{
     width: 200px;margin-top: 10px;
     margin-left: 10px;
@@ -54,7 +54,7 @@
     .header__menu li{
         margin: 10px 0px;
     }
-    
+
     .header__menu li a{
        color: white;
        text-decoration: none;
@@ -62,26 +62,26 @@
     .header__menu li a:hover{
        text-decoration: underline;
     }
-    .header__menu--profile{ 
+    .header__menu--profile{
         padding: 0px;
         display: flex;
         align-items: center;
 
     }
-    .header__menu--profile img{ 
-       
+    .header__menu--profile img{
+
         margin-right: 8px;
-        width: 40px;        
+        width: 40px;
         height: 40px;
     }
-    .header__menu--profile p{ 
+    .header__menu--profile p{
        color: white;
        margin: 0px;
    }
 
    /* buscador ↓ */
    .main{
-       height: 300px;
+       height: 250px;
        display: flex;
        /* ordena los elementos de arriba hacia abajo  */
        flex-direction: column;
@@ -89,10 +89,10 @@
        align-items: center;
 
    }
-   .main__title{    
+   .main__title{
        color: white;
        font-size: 25px;
-       
+
    }
    .input{
        /* Transparencia del input */
@@ -106,18 +106,70 @@
        padding: 0px 20px;
        width: 70%;
        outline-style: none;
-       
+
       }
-   
+
    /* pseudo elemento del texro dentro del input */
    ::placeholder{
     color: white;
-    
+
    }
+
+   .carrusel{
+       width: 100%;
+       /* background-color: aqua; */
+       padding: 30px;
+       overflow: scroll;
+       /*el relativo indica que los hijos que esten dentro
+       de este elemento, se posicionarán en funcion del padre, osea
+       el carrusel */
+        position: relative;
+   }
+
+   .carrusel__container{
+    /* el whitespace:nowrap deja que los elementos
+    salgan de pantalla y fluyan sin impotar el ancho de 
+    la pantalla*/
+       white-space: nowrap;
+       margin: 70px 0px; 
+       padding-bottom:10px;
+   }
+   .carrusel__item{
+       background-color: brown;
+       width: 200px;
+       height: 250px;
+       border-radius: 20px;
+       overflow: hidden;
+       margin-right :10px;
+        /*El display por defecto es que se pongan uno abajo del otro
+        pero con el inline, se pondran a la par, en linea  */
+       display: inline-block;
+       cursor: pointer;
+       transition: 450ms;
+       transform-origin:center left ;
+  }
+
+  /* cuando x tenga este estado ,(~) todos dentro del elemento harán esto */
+  .carrusel__item:hover  ~ .carrusel__item{
+      /* Los mueve hacia la derecha, el elemento actual */
+      transform: translate3d(100px,0,0);
+
+  }
+    /* cuando x tenga este estado ,elemento especifico hará esto */
+  .carrusel__container:hover  .carrusel__item{
+    opacity: 0.3;
+
+  }
+
+  .carrusel__container:hover .carrusel__item:hover{
+      transform: scale(1.5);
+      opacity: 01;
+
+  }
     </style>
     <header class="header">
-        <img class="header__img"  src="logo-platzi-video-BW2.png" alt="Logo"> 
-        <div class="header__menu">   
+        <img class="header__img"  src="logo-platzi-video-BW2.png" alt="Logo">
+        <div class="header__menu">
             <div class="header__menu--profile">
                 <img src="icons8-natural-user-interface-1-64.png" alt="User">
                 <p>Perfil</p>
@@ -128,22 +180,38 @@
             </ul>
         </div>
     </header>
-  
+
    <section class="main">
        <h2 class="main__title">¿Que quieres ver?</h2>
        <input class="input" type="text" placeholder="Buscar..." name="" id="">
    </section>
 
+<section class="carrusel">
+    <div class="carrusel__container">
+        <div class="carrusel__item">
+
+        </div>
+        <div class="carrusel__item">
+
+        </div>
+        <div class="carrusel__item">
+
+        </div>
+        <div class="carrusel__item">
+
+        </div>
+    </div>
+</section>
 <footer>
     <!-- <ol>
         <li>
         Contáctanos
         </li>
-        
+
         <li>
             Politicas De Privacidad
         </li>
-        
+
         <li>
             Terminos Y Condiciones
         </li> -->
