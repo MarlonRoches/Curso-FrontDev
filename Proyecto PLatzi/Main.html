@@ -193,8 +193,10 @@
     top: 0px;
     left: 0px;
     right: 0px;
-    bottom:0px;
-    /* background-color: green; */
+    bottom:0px;  
+    flex-direction:column-reverse;
+    display: flex;
+      /* background-color: green; */
   }
   .carrusel-item__details:hover {
     opacity:1;
@@ -204,19 +206,23 @@
     font-size: 15px;
     margin: 0px,0px,0px,0px;
 }
+.carrusel-item__details--subtitle{
+    font-size: 10px;
+    margin: 0px,0px,0px,0px;
+}
 .carrusel-item__details img{
     width: 20px;
     height: 20px;
     object-fit:contain;
     background-color: rgba(255, 255, 255, 0.17) ;
-    
+   
     border-radius: 5px;
     
 }
 .carrusel-item__details img:hover{
-    background-color: rgba(255, 255, 255, 0.768) ;
-    opacity: 0.775;
-    transition: 1000ms opacity;
+    background-color: rgba(255, 255, 255, 0.741) ;
+    opacity: 0.5;
+    transition:0.7s opacity;
 
 }
     </style>
@@ -249,16 +255,33 @@
                 <img src="icons8-play-64.png" alt="Icono_Play">                    
                     <img src="icons8-heart-plus-80.png" alt="Plus">
                 </div>
-                <p class="carrusel-item__details--title">  Laptop </p>
-                <p class="carrusel-item__details--subtitle"> 2019 16+ 117min </p>
+                <p class="carrusel-item__details--title">  Repuestos De Teclado </p>
+                <p class="carrusel-item__details--subtitle"> Chulisimos! </p>
             </div>
         </div>
-
+        
         <div class="carrusel-item">
-
+            <img class="carrusel-item__img" src="https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Laptops">
+            <div class="carrusel-item__details">
+                <div>   
+                <img src="icons8-play-64.png" alt="Icono_Play">                    
+                    <img src="icons8-heart-plus-80.png" alt="Plus">
+                </div>
+                <p class="carrusel-item__details--title">  Laptop </p>
+                <p class="carrusel-item__details--subtitle"> Omen y Mas! </p>
+            </div>
+            
         </div>
         <div class="carrusel-item">
-
+    <img class="carrusel-item__img" src="https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="UX">
+                <div class="carrusel-item__details">
+                    <div>   
+                    <img src="icons8-play-64.png" alt="Icono_Play">                    
+                        <img src="icons8-heart-plus-80.png" alt="Plus">
+                    </div>
+                    <p class="carrusel-item__details--title">  UX </p>
+                    <p class="carrusel-item__details--subtitle"> Design </p>
+                </div>
         </div>
         <div class="carrusel-item">
 
