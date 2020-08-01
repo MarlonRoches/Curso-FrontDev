@@ -283,3 +283,17 @@ text-decoration:underline ;
    .register__container--form__Login a:hover{
     text-decoration: underline;
    }
+
+/* MEDIA QUERIES, Para medidas responsivas */
+@media only screen and (max-width: 600px){
+    .login__container{
+        background-color: transparent;
+        border: none;
+        padding: 0px;
+        width: 70%;
+    }
+    .footer{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
