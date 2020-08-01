@@ -1,7 +1,7 @@
 header{
     width: 100%;
     height: 80px;
-    background-color: #8e57ed;
+    background-color: #21C08b;
     display: flex;
     justify-content: space-between;
     /* alinear elementos verticalmente */
@@ -67,7 +67,7 @@ body{
    }
 
    .login{
-       background:linear-gradient( #8e57ed,#21C08b);
+       background:linear-gradient( #21C08b,#8e57ed);
        /* propiedad para ubicar los elementos */
        display: flex;
        /* alinear en vertical*/
@@ -90,7 +90,11 @@ body{
        padding: 60px 68px 40px;
        min-height: 700px;
        width: 300px;
-   }
+
+       display: flex;
+       justify-content: space-between;
+        flex-direction: column;
+    }
    .login__container--form{
     display: flex;
     flex-direction: column;
@@ -120,6 +124,9 @@ body{
     text-decoration: underline;
 }
 
+.login__container--social-media{
+    padding: 25px 0px;
+}
 .login__container--social-media div{
 display: flex;
 align-items: center;
@@ -130,4 +137,73 @@ margin-bottom: 10px ;
 .login__container--social-media__icon{
     width: 25px;
     height: 25px;
+    margin-right: 10px;
+}
+.login__container--register{
+    font-size: 14px;
+display: flex;
+justify-content: space-between;
+}
+.login__container--register a{
+    color: white;
+    /* espacio entre los elementos */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px ;
+
+   }
+   .login__container--register a:hover{
+    text-decoration: underline;
+   }
+
+   .input
+   {
+       background-color: transparent;
+       border-left: 0px;
+       border-top: 0px;
+       border-right: 0px;
+       border-bottom: 2px solid white;
+       font-size: 16px;
+       font-family: 'Muli', sans-serif;
+       margin-bottom: 20px;
+       padding: 0px 20px;
+       outline: none;
+       height: 50px;
+       color: white;
+   }
+   .input::placeholder {
+      color: white;
+   }
+
+   .button{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    height: 50px;
+    color: white;
+    outline: none;
+    border: none;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-right: 10px 0px;
+   }
+
+   .footer{
+       display: flex;
+       align-items: center;
+       height: 100px;
+       width: 100%;
+       background-attachment: fixed;
+       background: #8e57ed;
+       
+   }
+.footer a{
+color: white;
+cursor: pointer;
+font-size: 14px;
+padding-left: 30px;
+text-decoration: none;
+}
+.footer a:hover{
+text-decoration:underline ;
 }
