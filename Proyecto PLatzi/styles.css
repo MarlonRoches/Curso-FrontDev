@@ -65,3 +65,69 @@ body{
        color: white;
        margin: 0px;
    }
+
+   .login{
+       background:linear-gradient( #8e57ed,#21C08b);
+       /* propiedad para ubicar los elementos */
+       display: flex;
+       /* alinear en vertical*/
+       align-items: center;
+       /* alinear en horizontal*/
+       justify-content: center;
+       /* alinear de arriva hacia abajo*/
+       flex-direction: column;
+       padding: 0px,30px;
+       /* valor para definir altura por defecto indiferente de el tamaño de la pantalla */
+       min-height:cal(100vh - 200px) /* medida relativa de lo que el usuario ve */;
+   }
+
+   .login__container{
+       background:rgba(255, 255, 255, 0.1);
+       border: 2px solid white ;
+       border-radius: 40px;
+       /* color del texto */
+       color: white;
+       padding: 60px 68px 40px;
+       min-height: 700px;
+       width: 300px;
+   }
+   .login__container--form{
+    display: flex;
+    flex-direction: column;
+
+
+   }
+   .login__container--form label{
+    font-size: 14px ;
+   }
+
+   .login__container--remember-me{
+    color: white;
+    display: flex;
+    /* espacio entre los elementos */
+    justify-content: space-between;
+    margin-top: 10px;
+   }
+   .login__container--remember-me a{
+    color: white;
+    /* espacio entre los elementos */
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 14px ;
+
+   }
+   .login__container--remember-me a:hover{
+    text-decoration: underline;
+}
+
+.login__container--social-media div{
+display: flex;
+align-items: center;
+font-size: 14px;
+margin-bottom: 10px ;
+}
+
+.login__container--social-media__icon{
+    width: 25px;
+    height: 25px;
+}
