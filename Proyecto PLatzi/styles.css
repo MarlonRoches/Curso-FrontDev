@@ -67,19 +67,19 @@ body{
    }
 
    .login{
-       background:linear-gradient( #21C08b,#8e57ed);
-       /* propiedad para ubicar los elementos */
-       display: flex;
-       /* alinear en vertical*/
-       align-items: center;
-       /* alinear en horizontal*/
-       justify-content: center;
-       /* alinear de arriva hacia abajo*/
-       flex-direction: column;
-       padding: 0px,30px;
-       /* valor para definir altura por defecto indiferente de el tamaño de la pantalla */
-       min-height:cal(100vh - 200px) /* medida relativa de lo que el usuario ve */;
-   }
+    background:linear-gradient( #21C08b,#8e57ed);
+    /* propiedad para ubicar los elementos */
+    display: flex;
+    /* alinear en vertical*/
+    align-items: center;
+    /* alinear en horizontal*/
+    justify-content: center;
+    /* alinear de arriva hacia abajo*/
+    flex-direction: column;
+    padding: 0px,30px;
+    /* valor para definir altura por defecto indiferente de el tamaño de la pantalla */
+    min-height:cal(100vh - 200px) /* medida relativa de lo que el usuario ve */;
+}
 
    .login__container{
        background:rgba(255, 255, 255, 0.1);
@@ -207,3 +207,79 @@ text-decoration: none;
 .footer a:hover{
 text-decoration:underline ;
 }
+
+
+
+.register{
+    background:linear-gradient( #21C08b,#8e57ed);
+    /* propiedad para ubicar los elementos */
+    display: flex;
+    /* alinear en vertical*/
+    align-items: center;
+    /* alinear en horizontal*/
+    justify-content: center;
+    /* alinear de arriva hacia abajo*/
+    flex-direction: column;
+    padding: 0px,30px;
+    /* valor para definir altura por defecto indiferente de el tamaño de la pantalla */
+    min-height:cal(100vh - 200px) /* medida relativa de lo que el usuario ve */;
+}
+
+
+.register__container{
+    background:rgba(255, 255, 255, 0.1);
+    border: 2px solid white ;
+    border-radius: 40px;
+    /* color del texto */
+    color: white;
+    padding: 60px 68px 40px;
+    min-height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+     flex-direction: column;
+ }
+ .register__container--form{
+    display: flex;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+   }
+
+   /* .register__container--form a {
+       color: white;
+       display: flex;
+        justify-content: center;
+        text-decoration: none;
+        margin:56px 0px;
+        padding: 0px 0px;
+        width: 150;
+    }
+    
+    .register__container--form a:hover {
+        
+        text-decoration: underline;
+        cursor: pointer;
+} */
+
+.register__container--form__Login{
+    color: white;
+    display: flex;
+    /* espacio entre los elementos */
+    justify-content: center;
+    margin: 56px 0px ;
+
+}
+
+.register__container--form__Login a{
+    color: white;
+    font-weight: bold;
+    /* espacio entre los elementos */
+    justify-content: space-between;
+    text-decoration: none;
+    font-size:16px ;
+
+   }
+   .register__container--form__Login a:hover{
+    text-decoration: underline;
+   }
