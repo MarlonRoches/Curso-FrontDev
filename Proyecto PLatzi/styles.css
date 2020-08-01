@@ -10,9 +10,12 @@ header{
 
 body{
     margin: 0px;
-    background-color: white;
+    background-color:#8e57ed;
     /* Aplicando font */
     font-family: 'Muli', sans-serif;
+    overflow-x: hidden;
+    
+
 }
     .header__img{   
     width: 200px;margin-top: 10px;
@@ -284,6 +287,7 @@ text-decoration:underline ;
     text-decoration: underline;
    }
 
+   
 /* MEDIA QUERIES, Para medidas responsivas */
 @media only screen and (max-width: 600px){
     .login__container{
@@ -296,4 +300,178 @@ text-decoration:underline ;
         align-items: flex-start;
         flex-direction: column;
     }
+}
+
+
+
+
+/* Maquetación final en main */
+
+.categories__title{
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    padding-left: 30px;
+    width: 100%;
+}
+ 
+
+   /* buscador ↓ */
+   .main{
+    height: 250px;
+    display: flex;
+    /* ordena los elementos de arriba hacia abajo  */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.main__title{
+    color: white;
+    font-size: 25px;
+
+}
+.input{
+    /* Transparencia del input */
+    background-color: rgba(255,255,255, 0.1);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    height: 50px;
+    padding: 0px 20px;
+    width: 70%;
+    outline-style: none;
+
+   }
+
+/* pseudo elemento del texro dentro del input */
+::placeholder{
+ color: white;
+
+}
+
+.carrusel{
+    width: 100%;
+    /* background-color: aqua; */
+    padding: 30px;
+    overflow: scroll;
+    /*el relativo indica que los hijos que esten dentro
+    de este elemento, se posicionarán en funcion del padre, osea
+    el carrusel */
+     position: relative;
+     overflow-x: hidden;
+}
+::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track{
+  background: rgba(190, 189, 189, 0.219);
+}
+::-webkit-scrollbar-thumb{
+  background: rgba(255, 255, 255, 0.281);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.699);
+}
+.carrusel__container{
+ /* el whitespace:nowrap deja que los elementos
+ salgan de pantalla y fluyan sin impotar el ancho de 
+ la pantalla*/
+    white-space: nowrap;
+    margin: 70px 0px; 
+    padding-bottom:10px;
+}
+.carrusel-item{
+    background-color: brown;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right :10px;
+     /*El display por defecto es que se pongan uno abajo del otro
+     pero con el inline, se pondran a la par, en linea  */
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms;
+    transform-origin:center left ;
+    position: relative;
+}
+
+/* cuando x tenga este estado ,(~) todos dentro del elemento harán esto */
+.carrusel-item:hover  ~ .carrusel-item{
+   /* Los mueve hacia la derecha, el elemento actual */
+   transform: translate3d(100px,0,0);
+ position: relative;
+}
+ /* cuando x tenga este estado ,elemento especifico hará esto */
+.carrusel__container:hover  .carrusel-item{
+ opacity: 0.3;
+
+}
+
+.carrusel__container:hover .carrusel-item:hover{
+   transform: scale(1.5);
+   opacity: 01;
+
+}
+
+/* dandole un tamaño fijo a la imagen de los elementos item */
+.carrusel-item__img{
+   width: 200px;
+   height: 250px;
+   /* obj-fit:cover redimenciona la imagen con su escala original pero
+   con las limitaciones establecidas */
+   object-fit: cover;  
+}
+
+
+.carrusel-item:hover  p{
+
+ color: white;
+}
+
+.carrusel-item__details{
+ background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(4, 138, 42, 0)100%);
+ font-size: 10px;
+ opacity:0;
+ transition:450ms opacity;   
+ padding: 10px;
+ position: absolute;  
+ top: 0px;
+ left: 0px;
+ right: 0px;
+ bottom:0px;  
+ flex-direction:column-reverse;
+ display: flex;
+   /* background-color: green; */
+}
+.carrusel-item__details:hover {
+ opacity:1;
+}
+.carrusel-item__details--title{
+ font-style: italic;
+ font-size: 15px;
+ margin: 0px,0px,0px,0px;
+}
+.carrusel-item__details--subtitle{
+ font-size: 10px;
+ margin: 0px,0px,0px,0px;
+}
+.carrusel-item__details img{
+ width: 20px;
+ height: 20px;
+ object-fit:contain;
+ background-color: rgba(255, 255, 255, 0.17) ;
+
+ border-radius: 5px;
+ 
+}
+.carrusel-item__details img:hover{
+ background-color: rgba(255, 255, 255, 0.741) ;
+ opacity: 0.5;
+ transition:0.7s opacity;
+
 }
